@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coffee Grace — Jenis Jenis Kopi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#F6EEE9; /* very soft cream */
+      --card:#F1E7DE;
+      --accent:#A67C52; /* soft brown */
+      --accent-dark:#5C3A21;
+      --muted:#D9B99B;
+      --text:#3b2b23;
+      --glass: rgba(255,255,255,0.55);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Poppins, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,var(--bg), #FBF6F2 200px);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:1rem;
+      padding:28px 40px;position:sticky;top:0;background:transparent;
+      backdrop-filter: blur(6px);
+    }
+    .logo{
+      display:flex;align-items:center;gap:14px;font-weight:600;cursor:default;
+    }
+    .logo .mark{
+      width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+      display:flex;align-items:center;justify-content:center;color:white;font-family:Playfair Display;font-size:22px;box-shadow:0 6px 18px rgba(92,58,33,0.16);
+    }
+    nav{display:flex;gap:18px}
+    nav a{color:var(--accent-dark);text-decoration:none;font-weight:500}
+    .hero{
+      max-width:1100px;margin:28px auto;display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;padding:36px;border-radius:22px;
+    }
+    .hero .card{
+      background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.6));padding:36px;border-radius:20px;box-shadow:0 12px 30px rgba(92,58,33,0.06);
+    }
+    h1{font-family:Playfair Display, serif;font-size:40px;margin:0 0 8px;color:var(--accent-dark)}
+    p.lead{margin:0 0 18px;color:var(--text);opacity:0.95}
+    .btn{
+      display:inline-block;padding:10px 16px;border-radius:12px;background:var(--accent-dark);color:white;text-decoration:none;font-weight:600;
+      box-shadow:0 6px 18px rgba(92,58,33,0.12);
+    }
+
+    /* coffee info grid */
+    .types{
+      max-width:1100px;margin:18px auto 80px;padding:0 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;
+    }
+    .type-card{background:var(--glass);padding:18px;border-radius:16px;border:1px solid rgba(92,58,33,0.06);backdrop-filter: blur(6px);}
+    .type-card h3{margin:0 0 6px;font-size:18px;color:var(--accent-dark)}
+    .type-card p{margin:0;color:#4b382f;font-size:14px}
+    .type-meta{display:flex;gap:10px;align-items:center;margin-top:12px;font-size:13px;color:#5a463d}
+    .bean{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,var(--muted),var(--accent));display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+
+    /* aside card */
+    aside.mini{
+      padding:22px;border-radius:18px;background:linear-gradient(180deg, #fff, #FCF6F3);box-shadow:0 10px 26px rgba(92,58,33,0.06);
+    }
+    .note{font-size:13px;color:#4f3b34}
+
+    footer{max-width:1100px;margin:20px auto 60px;padding:18px;border-radius:14px;text-align:center;color:#6b5146}
+
+    /* responsive */
+    @media (max-width:900px){.hero{grid-template-columns:1fr;padding:18px;margin:12px;border-radius:16px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="mark">G</div>
+      <div>
+        <div style="font-size:14px;opacity:0.9;color:var(--accent-dark)">Coffee Grace</div>
+        <div style="font-size:12px;margin-top:2px;color:#6b5146">Soft, aesthetic, kopi untuk semua</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#jenis">Jenis Kopi</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="card">
+        <h1>Coffee Grace</h1>
+        <p class="lead">Selamat datang di Coffee Grace — ruang kecil untuk para penikmat kopi. Di sini kami menjelaskan jenis-jenis kopi populer, cara penyajian singkat, dan karakter rasa setiap jenis kopi.</p>
+        <a class="btn" href="#jenis">Jelajahi Jenis Kopi</a>
+
+        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+          <div style="padding:8px 12px;border-radius:12px;background:linear-gradient(90deg,var(--muted),var(--card));font-size:13px">Aesthetic Brown</div>
+          <div style="padding:8px 12px;border-radius:12px;background:linear-gradient(90deg,var(--card),#fff);font-size:13px">Soft Palette</div>
+        </div>
+      </div>
+
+      <aside class="mini">
+        <h3 style="margin-top:0;color:var(--accent-dark)">Tip Singkat</h3>
+        <p class="note">Suhu, grind, dan perbandingan kopi-air sangat menentukan rasa. Espresso intens, sedangkan metode seduhan panjang seperti cold brew memberi rasa lebih halus dan manis.</p>
+
+        <h4 style="margin-top:14px;color:var(--accent-dark)">Favorit</h4>
+        <p class="note">Cappuccino untuk yang suka busa lembut. Cold brew untuk yang ingin rasa rendah asam.</p>
+      </aside>
+    </section>
+
+    <section id="jenis" class="types" aria-label="Jenis Kopi">
+      <article class="type-card">
+        <h3>Espresso ☕</h3>
+        <p>Ekstraksi kopi pekat menggunakan tekanan tinggi (sekitar 25–30 detik). Intens, berbody penuh, dan sebagai basis banyak minuman kopi lainnya.</p>
+        <div class="type-meta"><div class="bean">E</div><div>Rasa: pekat, bittersweet — Penyajian: 30ml</div></div>
+      </article>
+
+      <article class="type-card">
+        <h3>Americano</h3>
+        <p>Espresso yang ditambah air panas. Lebih ringan dari espresso, namun tetap mempertahankan karakter asam dan aroma asli kopi.</p>
+        <div class="type-meta"><div class="bean">A</div><div>Rasa: seimbang — Penyajian: 120–240ml</div></div>
+      </article>
+
+      <article class="type-card">
+        <h3>Cappuccino</h3>
+        <p>Perpaduan espresso, steamed milk, dan foam susu (proporsi kira-kira 1:1:1). Lembut dan tekstur busa menjadi kunci.</p>
+        <div class="type-meta"><div class="bean">C</div><div>Rasa: creamy, lembut — Penyajian: 150–180ml</div></div>
+      </article>
+
+      <article class="type-card">
+        <h3>Latte</h3>
+        <p>Lebih banyak susu dibanding cappuccino; espresso dengan steamed milk dan sedikit busa. Cocok bagi yang suka rasa kopi lembut.</p>
+        <div class="type-meta"><div class="bean">L</div><div>Rasa: mild, susu dominan — Penyajian: 200–350ml</div></div>
+      </article>
+
+      <article class="type-card">
+        <h3>Flat White</h3>
+        <p>Mirip latte tapi dengan tekstur microfoam yang lebih halus dan rasio kopi lebih kuat. Asal: Australia/New Zealand.</p>
+        <div class="type-meta"><div class="bean">F</div><div>Rasa: velvety, kuat — Penyajian: 150–200ml</div></div>
+      </article>
+
+      <article class="type-card">
+        <h3>Mocha</h3>
+        <p>Latte dengan tambahan cokelat atau sirup cokelat. Paduan kopi dan cokelat membuatnya terasa manis dan kaya.</p>
+        <div class="type-meta"><div class="bean">M</div><div>Rasa: manis, cokelaty — Penyajian: 200–350ml</div></div>
+      </article>
+
+      <article class="type-card">
+        <h3>Macchiato</h3>
+        <p>Espresso "tertandai" sedikit susu atau foam. Lebih ringan dari espresso murni namun tetap intens.</p>
+        <div class="type-meta"><div class="bean">Ma</div><div>Rasa: intens dengan sentuhan susu — Penyajian: 40–80ml</div></div>
+      </article>
+
+      <article class="type-card">
+        <h3>Cold Brew</h3>
+        <p>Kopi diseduh dengan air dingin selama 12–24 jam. Rasa lebih halus, manis alami, dan rendah keasaman.</p>
+        <div class="type-meta"><div class="bean">CB</div><div>Rasa: halus, manis alami — Penyajian: 200–400ml</div></div>
+      </article>
+
+      <article class="type-card">
+        <h3>Turkish Coffee</h3>
+        <p>Kopi bubuk sangat halus direbus bersama gula (opsional) dalam cezve. Disajikan tanpa disaring; tekstur kental dan aroma kuat.</p>
+        <div class="type-meta"><div class="bean">T</div><div>Rasa: pekat, rempah kadang hadir — Penyajian: 50–90ml</div></div>
+      </article>
+
+      <article class="type-card">
+        <h3>Vietnamese Coffee (Cà phê sữa đá)</h3>
+        <p>Kopi pekat yang disaring perlahan menggunakan phin dan disajikan dengan susu kental manis, biasanya disajikan dingin.</p>
+        <div class="type-meta"><div class="bean">V</div><div>Rasa: manis kuat — Penyajian: es / panas</div></div>
+      </article>
+    </section>
+
+    <section id="tentang" style="max-width:1100px;margin:0 auto 40px;padding:0 28px;">
+      <div style="background:linear-gradient(180deg,#fff, #FBF6F2);padding:22px;border-radius:16px;">
+        <h2 style="margin-top:0;color:var(--accent-dark);font-family:Playfair Display">Tentang Coffee Grace</h2>
+        <p style="margin:0;color:#5a463d">Coffee Grace dibuat sebagai referensi singkat untuk mengenal karakter dasar jenis-jenis kopi yang sering ditemui di kafe. Tulisan ini bukan pengganti pengalaman langsung: rasa kopi sangat dipengaruhi biji, roast, ukuran gilingan, rasio air, dan teknik penyajian.</p>
+      </div>
+    </section>
+
+    <section id="kontak" style="max-width:1100px;margin:0 auto 40px;padding:0 28px;">
+      <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;">
+        <div style="flex:1;background:var(--card);padding:18px;border-radius:12px">
+          <h3 style="margin:0;color:var(--accent-dark)">Butuh Bantuan?</h3>
+          <p style="margin-top:8px;color:#5a463d">Hubungi kami: <strong>hello@coffeegrace.example</strong></p>
+        </div>
+        <div style="width:220px;background:linear-gradient(180deg,#fff, #FCF6F3);padding:12px;border-radius:12px;text-align:center">
+          <div style="font-size:13px;color:#6b5146">Follow</div>
+          <div style="margin-top:8px;display:flex;gap:8px;justify-content:center"><span style="font-weight:700">IG</span><span style="font-weight:700">FB</span><span style="font-weight:700">TW</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Coffee Grace — dibuat dengan cinta untuk penikmat kopi.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        const id = this.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+  </script>
+</body>
+</html>
